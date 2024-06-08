@@ -35,7 +35,7 @@ public class Main {
       System.out.println("Type product quantity:");
       userProduct.amount = sc.nextInt();
 
-      System.out.println(userProduct.);
+      System.out.println(userProduct);
 
 
       sc.close();
