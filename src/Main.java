@@ -27,15 +27,24 @@ public class Main {
 //         System.out.println("Larger area: Y");
 //      }
 
-      Product userProduct = new Product();
       System.out.println("Type product name:");
-      userProduct.name = sc.nextLine();
+      String name = sc.nextLine();
       System.out.println("Type product price:");
-      userProduct.price = sc.nextDouble();
+      double price = sc.nextDouble();
       System.out.println("Type product quantity:");
-      userProduct.amount = sc.nextInt();
+      int amount = sc.nextInt();
+      Product userProduct = new Product(name, price, amount);
 
-      System.out.println(userProduct);
+      System.out.printf("Product data: %s %n", userProduct);
+      System.out.printf("Enter the number of products to be added in stock: %n");
+      amount = sc.nextInt();
+      userProduct.addProduct(amount);
+      System.out.printf("Updated data: %s %n", userProduct);
+
+      System.out.printf("Enter the number of products to be removed from stock: %n");
+      amount = sc.nextInt();
+      userProduct.removeProduct(amount);
+      System.out.printf("Updated data: %s %n", userProduct);
 
 
       sc.close();
